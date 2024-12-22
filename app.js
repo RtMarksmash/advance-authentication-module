@@ -54,18 +54,6 @@ mongoose
         url
     )
     .then(result => {
-        User.findOne().then(user => {
-            if (!user) {
-                const user = new User({
-                    name: 'mario',
-                    email: 'mario@mora.com',
-                    cart: {
-                        items: []
-                    }
-                });
-                user.save();
-            }
-        });
         app.listen(config.port, () => {
             console.log(config.message)
         });
