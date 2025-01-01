@@ -77,7 +77,7 @@ mongoose
     .connect(
         url
     )
-    .then(result => {
+    .then((result) => {
         app.listen(config.port, () => {
             console.log(config.message)
         });
